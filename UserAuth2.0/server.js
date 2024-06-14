@@ -19,11 +19,16 @@ mongoose.connect("mongodb+srv://ayushsoni:ayush4521@cluster1.6cn2qee.mongodb.net
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend-projex/Pandavas/login')));
 
-// Routes
-app.use('/api/auth', require('./routes/auth'));// Add this line
+// Route to serve login.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend-projex/Pandavas/login/login.html'));
+});
+
+// API Routes
+app.use('/api/auth', require('./routes/auth'));
 
 const PORT = process.env.PORT || 5500;
 
-app.listen(5500, () => {
+app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
