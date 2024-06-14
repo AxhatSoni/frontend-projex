@@ -17,11 +17,10 @@ mongoose.connect("mongodb+srv://ayushsoni:ayush4521@cluster1.6cn2qee.mongodb.net
 });
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../frontend-projex')));
+app.use(express.static(path.join(__dirname, '../frontend-projex/Pandavas/login')));
 
 // Routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/team', require('./routes/team'));  // Add this line
+app.use('/api/auth', require('./routes/auth'));// Add this line
 
 const PORT = process.env.PORT || 5500;
 
