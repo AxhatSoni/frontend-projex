@@ -1,0 +1,228 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #a6c0fe, #f68084);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #1e88e5;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 15px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(45deg, #3a82ae, #1e88e5);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.sidebar nav ul li:hover {
+    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feed {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.message-box textarea:focus {
+    border-color: #1e88e5;
+}
+
+.post {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.user-info .user-name {
+    font-weight: bold;
+    display: block;
+}
+
+.user-info .post-time {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.post-content iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.post-footer {
+    margin-top: 15px;
+    color: #1e88e5;
+}
+
+.right-sidebar {
+    width: 250px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-left: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-sidebar h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #3a82ae;
+}
+
+.right-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.right-sidebar ul li {
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.right-sidebar ul li:hover {
+    color: #1e88e5;
+}
+
+.right-sidebar ul li span {
+    float: right;
+    font-weight: bold;
+}
+
+.company-pulse, .my-tasks, .popular-posts, .desktop-app, .mobile-app {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.company-pulse:hover, .my-tasks:hover, .popular-posts:hover, .desktop-app:hover, .mobile-app:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.logo{
+    position: fixed;
+    height: auto;
+    left: 2px;
+    width: 40px;
+}
+
+.name{
+    position: fixed;
+    font-weight: bold;
+    height: auto;
+    left: 45px;
+    width: 50px;
+}

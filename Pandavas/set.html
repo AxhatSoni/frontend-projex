@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="set.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="E:\codes\AkshatPro\pandavas\projex logo.jpg" alt="ProjeX Logo" class="logo">            <h1>ProjeX settings</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-item">Home</div>
+            <div class="sidebar-item">Feed</div>
+            <div class="sidebar-item">Messenger</div>
+            <div class="sidebar-item">Calendar</div>
+            <div class="sidebar-item">Online Documents</div>
+            <div class="sidebar-item">Drive</div>
+            <div class="sidebar-item">Webmail</div>
+            <div class="sidebar-item">Workgroups</div>
+            <div class="sidebar-item active">Settings</div>
+        </div>
+        <div class="main-content">
+            <div class="profile-section">
+                <div class="profile-pic">
+                    <img src="profile.png" alt="Profile Picture">
+                </div>
+                <div class="profile-info">
+                    <h2>User's Profile</h2>
+                </div>
+            </div>
+            <div class="theme-section">
+                <h3>Themes</h3>
+                <p>Pick a theme and pattern for this background.</p>
+                <div class="theme-options">
+                    <div class="theme-option" data-theme="solid">
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                    </div>
+                    <div class="theme-option" data-theme="light">
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                    </div>
+                    <div class="theme-option" data-theme="image">
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                    </div>
+                    <div class="theme-option" data-theme="art">
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                        <div class="theme-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="font-section">
+                <h3>Font Settings</h3>
+                <label for="font-family">Font Family:</label>
+                <select id="font-family">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <br>
+                <label for="font-size">Font Size:</label>
+                <input type="number" id="font-size" min="10" max="30" value="14">
+            </div>
+            <div class="landing-page-section">
+                <h3>Landing Page</h3>
+                <label for="landing-page">Choose your landing page:</label>
+                <select id="landing-page">
+                    <option value="home">Home</option>
+                    <option value="feed">Feed</option>
+                    <option value="messenger">Messenger</option>
+                    <option value="calendar">Calendar</option>
+                    <option value="documents">Online Documents</option>
+                </select>
+            </div>
+            <div class="mode-section">
+                <h3>Day/Night Mode</h3>
+                <label for="mode">Choose mode:</label>
+                <select id="mode">
+                    <option value="day">Day</option>
+                    <option value="night">Night</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="set.js"></script>
+</body>
+</html>

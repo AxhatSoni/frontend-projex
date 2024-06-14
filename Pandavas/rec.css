@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(58, 130, 158);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.container {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: #FF9900;
+    margin-bottom: 20px;
+}
+
+.content {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #FF9900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+.help-text {
+    font-size: 12px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.help-text a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.help-text a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    font-size: 12px;
+    color: #777;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 10px;
+}

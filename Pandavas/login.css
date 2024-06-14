@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #a6c0fe, #f68084); /* Updated page background to linear gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #007bff; /* Navigation bar background color */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    animation: slideIn 1s ease-out;
+    margin-top: 80px; /* Add margin to push the content below the navbar */
+}
+
+h2 {
+    font-size: 24px;
+    color: #007bff; /* Updated color to match navigation bar */
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="email"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.forgot-password {
+    align-self: flex-end;
+    font-size: 12px;
+    color: #e74c3c;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #c0392b;
+}
+
+.login-button {
+    padding: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.or-separator {
+    margin: 20px 0;
+    color: #999;
+    font-size: 14px;
+    position: relative;
+}
+
+.or-separator::before, .or-separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #ccc;
+}
+
+.or-separator::before {
+    left: 0;
+}
+
+.or-separator::after {
+    right: 0;
+}
+
+.social-login p {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.social-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-button:hover {
+    transform: scale(1.1);
+}
+
+.signup-text {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+.signup-text a {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signup-text a:hover {
+    color: #c0392b;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

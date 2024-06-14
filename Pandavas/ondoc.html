@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Documentation</title>
+    <link rel="stylesheet" href="ondoc.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="E:\codes\AkshatPro\pandavas\projex logo.jpg" alt="ProjeX Logo" class="logo">
+            <h1><b>"  ,ProjeX</b></h1>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-item">Home</div>
+            <div class="sidebar-item">Feed</div>
+            <div class="sidebar-item">Messenger</div>
+            <div class="sidebar-item">Calendar</div>
+            <div class="sidebar-item active">Online Documents</div>
+            <div class="sidebar-item">Drive</div>
+            <div class="sidebar-item">Webmail</div>
+            <div class="sidebar-item">Workgroups</div>
+            <div class="sidebar-item">Settings</div>
+        </div>
+        <div class="main-content">
+            <div class="top-bar">
+                <button class="new-doc-btn">New Document</button>
+                <input type="text" placeholder="Filter and search" class="search-box">
+            </div>
+            <div class="document-options">
+                <div class="doc-option" onclick="openDoc('document')">
+                    <img src="icons/document.png" alt="Document">
+                    <p>Document</p>
+                </div>
+                <div class="doc-option" onclick="openDoc('spreadsheet')">
+                    <img src="icons/spreadsheet.png" alt="Spreadsheet">
+                    <p>Spreadsheet</p>
+                </div>
+                <div class="doc-option" onclick="openDoc('presentation')">
+                    <img src="icons/presentation.png" alt="Presentation">
+                    <p>Presentation</p>
+                </div>
+                <div class="doc-option" onclick="openDoc('drive')">
+                    <img src="icons/drive.png" alt="Drive">
+                    <p>Open from Drive</p>
+                </div>
+                <div class="doc-option" onclick="openDoc('computer')">
+                    <img src="icons/computer.png" alt="Computer">
+                    <p>Open from my computer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="ondoc.js"></script>
+</body>
+</html>

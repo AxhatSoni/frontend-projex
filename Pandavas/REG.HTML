@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjeX - Register</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="E:\codes\AkshatPro\pandavas\projex logo.jpg" alt="ProjeX Logo" class="logo">            <h1>ProjeX</h1>
+            <p><b>Register for an account</b></p>
+            <a href="login.html" class="btn">Login</a> 
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="text" id="mobile" name="mobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        <option value="manager">Manager</option>
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ProjeX. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
