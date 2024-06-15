@@ -2,9 +2,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
-require('dotenv').config();
+const dotenv = require('dotenv');
+const authRoutes = require('./routes/auth');
+const bodyParser = require('body-parser');
+
+dotenv.config();
 
 const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(express.static(path.join(__dirname, '../Pandavas')));
 
 // Connect to MongoDB
 mongoose.connect("mongodb+srv://ayushsoni:ayush4521@cluster1.6cn2qee.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1", {
@@ -17,15 +26,17 @@ mongoose.connect("mongodb+srv://ayushsoni:ayush4521@cluster1.6cn2qee.mongodb.net
 });
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../frontend-projex/Pandavas/login')));
+
 
 // Route to serve login.html
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend-projex/Pandavas/login/login.html'));
-});
 
 // API Routes
-app.use('/api/auth', require('./routes/auth'));
+app.use('/api/auth', authRoutes);
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Pandavas/reg.html'));
+});
+
 
 const PORT = process.env.PORT || 5500;
 
