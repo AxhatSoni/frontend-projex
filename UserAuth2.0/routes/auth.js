@@ -7,7 +7,7 @@ const router = express.Router();
 
 // Register Route
 router.post('/register', async (req, res) => {
-    const { username, email, password} = req.body;
+    const { username, email, password, confirmPassword} = req.body;
 
     if(password != confirmPassword) {
         return res.status(400).json({message: 'Passwords do not match'});
@@ -18,13 +18,13 @@ router.post('/register', async (req, res) => {
         if (user) {
             return res.status(400).json({ message: 'User already exists' });
         }
+        const salt = await bcrypt.genSalt(10);
+        user.password = await bcrypt.hash(password, salt);
 
         
         user = new User({ username, email, password: hashedPassword });
         
-        const salt = await bcrypt.genSalt(10);
-        user.password = await bcrypt.hash(password, salt);
-
+        
         await user.save();
 
         // const payload = {user : {id: user.id}};
@@ -53,7 +53,7 @@ router.post('/login', async (req, res) => {
         }
 
         const payload = { userId: user._id };
-        const token = jwt.sign(payload, "MYNAMEISAYUSHSONISTUDENTOFCOMPUTERSCIENCEENGINEER1234567", { expiresIn: '1h' });
+        const token = jwt.sign(payload, "MYNAMEISAYUSHSONISTUDENTOFCOMPUTERSCIENCEENGINEERING1234567", { expiresIn: '1h' });
 
         res.json({ msg: 'User logged in successfully', token, username: user.username });
     } catch (err) {

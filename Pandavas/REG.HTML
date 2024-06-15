@@ -17,27 +17,28 @@
 
     <main>
         <div class="container">
-            <form id = "register-form">
+            <form id = 'register-form'>
                 <div class="form-group">
                     <label for="register-username">Name</label>
-                    <input type="text" id="register-name" name="username" required>
+                    <input type="text" id="register-name" placeholder="username" required>
                 </div>
                 <div class="form-group">
                     <label for="register-email">Email ID</label>
-                    <input type="email" id="register-email" name="email" required>
+                    <input type="email" id="register-email" placeholder="email" required>
                 </div>
         
                 <div class="form-group">
                     <label for="register-password">Password</label>
-                    <input type="password" id="register-password" name="password" required>
+                    <input type="password" id="register-password" placeholder="password" required>
                 </div>
                 <div class="form-group">
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
-                <button type="submit" class="btn">Register</button>
-                <div class="alert" id="register-alert"></div>
+                <button type="submit" class="register-button">Register</button>
             </form>
+            <p class="login-text">Already have an account? <a href= "login.html">Log In</a></p>
+            <div id="register-alert" class="alert"></div>
         </div>
        
     </main>
@@ -47,7 +48,6 @@
             <p>&copy; 2024 ProjeX. All rights reserved.</p>
         </div>
     </footer>
-
     <script src="reg.js"></script>
 </body>
 </html>

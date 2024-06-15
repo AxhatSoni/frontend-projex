@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded' , () => {
 document.getElementById('register-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     const username = document.getElementById('register-username').value;
@@ -36,5 +37,6 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
         registerAlert.textContent = 'Failed to register, Pleaser try again';
         registerAlert.style.color = 'red';
     }
+});
 });
 

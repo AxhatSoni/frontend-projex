@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded' , () => {
 document.getElementById('login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.getElementById('login-email').value;
@@ -17,11 +18,12 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
             localStorage.setItem('username', data.username);
             window.location.href = '/home.html';
         } else {
-            loginAlert.textContent = data.error;
+            loginAlert.textContent = data.error || 'Login failed, Please try again ';
             loginAlert.style.color = 'red';
         }
     } catch (err) {
         loginAlert.textContent = 'Failed to login. Please try again.';
         loginAlert.style.color = 'red';
     }
+});
 });

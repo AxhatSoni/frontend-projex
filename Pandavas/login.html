@@ -14,12 +14,13 @@
     </header>
     <div class="login-container">
         <h2>Login</h2>
-        <form>
-            <input type="email" placeholder="you@example.com" required>
-            <input type="password" placeholder="Enter 6 characters or more" required>
+        <form id="login-form"> 
+            <input type="email" id="login-email" placeholder="you@example.com" required>
+            <input type="password" id="login-password" placeholder="Enter 6 characters or more" required>
             <a href="forgot.html" class="forgot-password">Forgot password?</a>
-            <button type="submit" class="login-button">LOG IN</button>
+            <button type="submit" class="login-button">LOG IN</button>  
         </form>
+       
         <div class="or-separator">OR</div>
         <div class="social-login">
             <p>Sign in using</p>
@@ -36,6 +37,8 @@
             </div>
         </div>
         <p class="signup-text">Not a member yet? <a href="#">Sign Up</a></p>
+        <p class="forgot-password"><a href="forgot.html">Forgot password?</a></p>
+        <div id="login-alert" class="alert"></div>
     </div>
 
     <script src="login.js"></script>
