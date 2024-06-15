@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Discuss</title>
+    <link rel="stylesheet" href="discuss.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../Pandavas/projexlogo.jpg" alt="ProjeX Logo" class="logo">
+            <h1>ProjeX Discuss</h1>
+        </nav>
+    </header>
+    <h1>Discuss</h1>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <form id="chat-form">
+            <input type="text" id="msg" placeholder="Enter message" required autocomplete="off">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="discuss.js"></script>
+</body>
+</html>

@@ -28,7 +28,7 @@
                     <a href="ondoc.html">Online Documentation</a>
                 </div>
             </div>
-            <div class="sidebar-item">Discuss</div>
+            <a href ="discuss.html"><div class="sidebar-item">Discuss</div></a>
             <div class="sidebar-item">Reports</div>
             <a href="vc.html" ><div class="sidebar-item">Video Conference</div></a>
             <div class="sidebar-item">Projects</div>
@@ -40,7 +40,8 @@
         <div class="main-content">
             <div class="welcome-section">
                 <h2>Welcome to ProjeX</h2>
-                <p>Company: your company name</p>
+                <p id="welcome-user"></p>
+                <button id = "create-team-button">Create/Join Team</button>
                 <div class="task-status">
                     <div class="status-box">
                         <h3>0</h3>
@@ -79,6 +80,24 @@
         <button class="turn-on-btn">Turn On</button>
         <button class="dismiss-btn">Dismiss</button>
     </div>
+
+    <div id="team-model" class="model">
+        <div class="modal-content">
+            <span class="'close">&times;</span>
+            <h2>Create/Join Team</h2>
+            <form id="team-form">
+                <input type="text" id="team-name" placeholder="Enter team name" required>
+                <div id="team-members">
+                    <input type="text" class="team-member" placeholder="Enter members" required>
+                </div>
+                <button type="button" id="add-members">Add Member</button>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="team-alert"></p>
+        </div>
+    </div>
+
+
     <script src="home.js"></script>
 </body>
 </html>

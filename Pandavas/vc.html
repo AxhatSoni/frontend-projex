@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjeX - Video Conference</title>
+    <link rel="stylesheet" href="vc.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="../Pandavas/projexlogo.jpg" alt="ProjeX Logo" class="logo">
+            <h1>ProjeX</h1>
+            <p>Video Conference</p>
+        </div>
+    </header>
+
+    <div id="root"></div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ProjeX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@zegocloud/zego-uikit-prebuilt/zego-uikit-prebuilt.js"></script>
+    <script>
+        window.onload = function () {
+            function getUrlParams(url) {
+                let urlStr = url.split('?')[1];
+                const urlSearchParams = new URLSearchParams(urlStr);
+                const result = Object.fromEntries(urlSearchParams.entries());
+                return result;
+            }
+
+            const roomID = getUrlParams(window.location.href)['roomID'] || (Math.floor(Math.random() * 10000) + "");
+            const userID = Math.floor(Math.random() * 10000) + "";
+            const userName = "userName" + userID;
+            const appID = 598126434;
+            const serverSecret = "3f5fd4cb18ac32b6bf45880d7234bc99";
+            const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID, userID, userName);
+
+            const zp = ZegoUIKitPrebuilt.create(kitToken);
+            zp.joinRoom({
+                container: document.querySelector("#root"),
+                sharedLinks: [{
+                    name: 'Personal link',
+                    url: window.location.protocol + '//' + window.location.host + window.location.pathname + '?roomID=' + roomID,
+                }],
+                scenario: {
+                    mode: ZegoUIKitPrebuilt.VideoConference,
+                },
+                turnOnMicrophoneWhenJoining: true,
+                turnOnCameraWhenJoining: true,
+                showMyCameraToggleButton: true,
+                showMyMicrophoneToggleButton: true,
+                showAudioVideoSettingsButton: true,
+                showScreenSharingButton: true,
+                showTextChat: true,
+                showUserList: true,
+                maxUsers: 50,
+                layout: "Auto",
+                showLayoutButton: true,
+            });
+        }
+    </script>
+</body>
+
+</html>

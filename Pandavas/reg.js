@@ -37,6 +37,8 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
         registerAlert.textContent = 'Failed to register, Pleaser try again';
         registerAlert.style.color = 'red';
     }
+
+    localStorage.setItem('username', data.username);
 });
 });
 
