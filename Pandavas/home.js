@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const username= localStorage.getItem('username');
     const createTeamButton = document.getElementById('create-team-button');
+    const joinTeamButton = document.getElementsById('join-team-button');
+    const discussButton = document.getElementsById('discuss-button');
     const teamModal = document.getElementById('team-modal');
     const closeModal = document.querySelector('.close');
     const teamForm = document.getElementById('team-form');
